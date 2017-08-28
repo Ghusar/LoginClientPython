@@ -21,8 +21,8 @@ post_fields = {
                 'producttype':'0'
             }     # Set POST fields here
 
-while True:
-    request = Request(url, urllib.urlencode(post_fields))
-    json = urlopen(request,context=ssl._create_unverified_context()).read().decode()
-    print json
-    time.sleep(3600)
+
+request = Request(url, urllib.urlencode(post_fields))
+json = urlopen(request,context=ssl._create_unverified_context()).read().decode()
+print json
+time.sleep(3600)
